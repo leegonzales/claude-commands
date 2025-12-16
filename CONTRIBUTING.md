@@ -31,7 +31,7 @@ Every command file should include:
 ---
 description: One-line description shown in autocomplete
 argument-hint: <required-arg> [optional-arg]
-allowed-tools: Tool1, Tool2(pattern:*)
+allowed-tools: Read, Bash(git:*)
 ---
 
 ## Task Description
@@ -42,6 +42,12 @@ Clear explanation of what this command does.
 
 1. Step one
 2. Step two
+
+### Usage Examples
+
+```bash
+/your-command arg1 arg2
+```
 
 ### Output
 
@@ -82,7 +88,7 @@ allowed-tools: Read, Write, Edit, Bash(npm:*)
 
 ## Testing Your Command
 
-1. Install locally: `ln -sf $(pwd)/your-command.md ~/.claude/commands/`
+1. Install locally: `ln -sf $(pwd)/<category>/your-command.md ~/.claude/commands/`
 2. Test in Claude Code: `/your-command`
 3. Verify it works as expected
 4. Test edge cases
@@ -90,7 +96,7 @@ allowed-tools: Read, Write, Edit, Bash(npm:*)
 ## Submitting a PR
 
 1. Ensure your command follows the guidelines above
-2. Update README.md if adding a new category
+2. Update README.md to add your command to the appropriate table (and add the category if new)
 3. Commit with conventional format: `feat: add command-name command`
 4. Push and create a PR
 5. Describe what the command does and why it's useful
