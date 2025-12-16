@@ -108,7 +108,7 @@ allowed-tools: Read, Write, Edit, Bash(npm:*)
 
 ## Testing Your Command
 
-1. Install locally (replace `<category>` and `your-command`): `ln -sf "$(pwd)/<category>/your-command.md" "$HOME/.claude/commands/"`
+1. Install locally (replace `<category>` and `your-command`): `mkdir -p "$HOME/.claude/commands" && ln -sf "$(pwd)/<category>/your-command.md" "$HOME/.claude/commands/"`
 2. Test in Claude Code: `/your-command`
 3. Verify it works as expected
 4. Test edge cases
