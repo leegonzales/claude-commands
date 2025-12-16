@@ -46,12 +46,32 @@ Clear explanation of what this command does.
 ### Usage Examples
 
 ```bash
+# With only the required argument
+/your-command arg1
+
+# With both required and optional arguments
 /your-command arg1 arg2
 ```
 
 ### Output
 
 Describe expected output format.
+```
+
+### Using Arguments
+
+Your command body can reference user-provided arguments:
+
+| Variable | Description |
+|----------|-------------|
+| `$ARGUMENTS` | Full argument string as provided |
+| `$1`, `$2`, etc. | Individual positional arguments |
+
+Example usage in your command:
+```markdown
+Analyze file: $1
+With options: $2
+Full input was: $ARGUMENTS
 ```
 
 ### Frontmatter Fields
