@@ -79,7 +79,7 @@ Full input was: $ARGUMENTS
 | Field | Required | Description |
 |-------|----------|-------------|
 | `description` | Yes | Brief description for help/autocomplete |
-| `argument-hint` | If args used | Shows usage pattern to user |
+| `argument-hint` | If args used | Shows usage pattern in autocomplete, e.g. `<file> [options]` |
 | `allowed-tools` | Recommended | Restrict tools for safety |
 | `model` | No | Specific model override |
 
@@ -108,7 +108,7 @@ allowed-tools: Read, Write, Edit, Bash(npm:*)
 
 ## Testing Your Command
 
-1. Install locally: `ln -sf "$(pwd)/<category>/your-command.md" "$HOME/.claude/commands/"`
+1. Install locally (replace `<category>` and `your-command`): `ln -sf "$(pwd)/<category>/your-command.md" "$HOME/.claude/commands/"`
 2. Test in Claude Code: `/your-command`
 3. Verify it works as expected
 4. Test edge cases
@@ -116,7 +116,7 @@ allowed-tools: Read, Write, Edit, Bash(npm:*)
 ## Submitting a PR
 
 1. Ensure your command follows the guidelines above
-2. Update README.md to add your command to the appropriate table (and add the category if new)
+2. **Important**: Update [README.md](README.md#commands) to add your command to the appropriate table (and add the category if new)
 3. Commit with conventional format: `feat: add command-name command`
 4. Push and create a PR
 5. Describe what the command does and why it's useful
